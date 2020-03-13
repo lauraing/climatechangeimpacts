@@ -1,0 +1,29 @@
+---
+title: "Work documentation"
+author: "Laura Ingulsrud and Keene Morrow"
+date: "3/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(devtools)
+library(roxygen2)
+
+```
+
+```{r}
+
+# Load in UCSB rainfall data
+UCSB_daily_rainfall <- read_csv("R/UCSB_daily_rainfall.csv")
+
+# Store UCSB rainfall data
+use_data(UCSB_daily_rainfall, pkg=climatechangeimpacts)
+
+# Document UCSB_daily_rainfall.R
+devtools::document(UCSB_daily_rainfall) # ?? don't know why it's not working
+
+```
+
