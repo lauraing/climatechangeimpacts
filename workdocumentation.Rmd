@@ -23,7 +23,7 @@ UCSB_daily_rainfall <- read_csv("R/UCSB_daily_rainfall.csv")
 use_data(UCSB_daily_rainfall, pkg=climatechangeimpacts)
 
 # Document UCSB_daily_rainfall.R
-devtools::document(UCSB_daily_rainfall) # ?? don't know why it's not working
+devtools::document(UCSB_daily_rainfall)
 
 ```
 
