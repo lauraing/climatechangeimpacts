@@ -33,5 +33,3 @@ annual_precip = function(UCSB_daily_rainfall,  years = 1952:2019){
   return(precip_sum)
 
 }
-
-annual_precip(UCSB_daily_rainfall, years = 2009:2018)
