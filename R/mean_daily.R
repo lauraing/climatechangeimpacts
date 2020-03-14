@@ -1,4 +1,4 @@
-#' mean_precip
+#' mean_daily
 #'
 #' Calculate mean daily precipitation over a specified time period. The ouput of this function returns the precipitation amount for that time period.
 #' @param data data frame with columns date and daily_rain
