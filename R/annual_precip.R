@@ -22,14 +22,6 @@ annual_precip = function(UCSB_daily_rainfall,  years = 1952:2019){
   names(precip_sum) = c("Year", "Rainfall.inches")
   years = as.numeric(as.character(precip_sum$Year))
 
-  #precip_array <- array(data = precip_sum$Rainfall.inches,
-                      #dim = c(1, 68),
-                      #dimnames = list(
-                        #1, # sum of rainfall/year labels
-                        #1952:2019)) # year labels
-
-  #precip_years_max <- apply(precip_array, MARGIN = 2, FUN = max, na.rm = TRUE)
-
   return(precip_sum)
 
 }
