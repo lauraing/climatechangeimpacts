@@ -11,20 +11,19 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(devtools)
 library(roxygen2)
-library(lubridate)
 
 ```
 
 ```{r}
 
 # Load in UCSB rainfall data
-UCSB_daily_rainfall <- read_csv("R/UCSB_daily_rainfall.csv")
+UCSB_rain <- read_csv("R/UCSB_rain.csv")
 
 # Store UCSB rainfall data
-use_data(UCSB_daily_rainfall, pkg=climatechangeimpacts)
+use_data(UCSB_rain, pkg=climatechangeimpacts)
 
 # Document UCSB_daily_rainfall.R
-devtools::document(UCSB_daily_rainfall)
+devtools::document(UCSB_rain)
 
 ```
 

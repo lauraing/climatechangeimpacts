@@ -7,10 +7,10 @@
 #' @param total_depth the total depth of the reservoir
 #' @param start_depth the depth at the beginning of the year range in years
 #' @author Laura Ingulsrud & Keene Morrow
-#' @example watersupply(data = UCSB_daily_rainfall, years = 2010:2015, area = 1000, total_depth = 2000, start_depth = 10)
+#' @example watersupply(data = UCSB_rain, years = 2010:2015, area = 1000, total_depth = 2000, start_depth = 10)
 #' @return Returns a list containing,
 #' \describe{
-#'  \item{end_vol}{Volume of water in reservoir at the end of the time period}
+#'  \item{end_vol}{Volume of water in reservoir at the end of the time period (square feet)}
 #'  \item{pct_full}{Percent of reservoir volume occupied at the end of the time period}
 #'  \item{pct_change}{Percent change in reservoir volume occupied over the time period}
 #'  }

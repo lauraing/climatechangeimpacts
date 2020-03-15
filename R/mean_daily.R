@@ -5,7 +5,7 @@
 #' @param start the first date of the range
 #' @param end the last date of the range
 #' @author Laura Ingulsrud & Keene Morrow
-#' @example mean_daily(data = UCSB_daily_rainfall, start = "2018-01-01", end = "2018-12-31")
+#' @example mean_daily(data = UCSB_rain, start = "2018-01-01", end = "2018-12-31")
 #' @return Returns numeric value for the mean daily precipitation over the period between the start and end dates
 #'
 
