@@ -12,9 +12,9 @@
 #'  }
 #'
 
-annual_precip = function(UCSB_daily_rainfall,  years = 1952:2019){
+annual_precip = function(data = "",  years = 1952:2019){
 
-  precip_df <- UCSB_daily_rainfall %>%
+  precip_df <- data %>%
     dplyr::filter(year %in% years) %>%
     dplyr::select(year, month, day, daily_rain)
 
