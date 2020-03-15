@@ -1,0 +1,27 @@
+---
+title: "Water Supply Function Vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Water Supply Function Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(lubridate)
+library(climatechangeimpacts)
+```
+
+```{r example}
+
+# get data
+data("UCSB_daily_rainfall")
+
+# test mean_daily function
+test_mean_daily <- mean_daily(data = UCSB_daily_rainfall, start = "2010-01-01", end = "2011-01-01")
+
+```
+
