@@ -18,6 +18,14 @@
 
 watersupply = function(data = "",  years = 1952:2018, area = 100, total_depth = 200, start_depth = 100){
 
+  area = ifelse((area <= 0), return("area must be greater than zero"), area)
+
+  total_depth = ifelse((total_depth <= 0), return("total_depth must be greater than zero"), total_depth)
+
+  start_depth = ifelse((start_depth <= 0), return("start_depth must be greater than zero"), start_depth)
+
+  if (start_depth > total_depth) return("start_depth must not be greater than total_depth")
+
   annual <- annual_precip(data = data, years = years)
 
   change_in <- sum(annual$Rainfall.inches)

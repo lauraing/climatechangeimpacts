@@ -13,6 +13,12 @@
 #'
 
 annual_precip = function(data = "",  years = 1952:2019){
+  if (class(data$year) != "numeric") return("Dataframe must contain variable year of class numeric")
+  if (class(data$month) != "numeric") return("Dataframe must contain variable month of class numeric")
+  if (class(data$day) != "numeric") return("Dataframe must contain variable day of class numeric")
+  if (class(data$daily_rain) != "numeric") return("Dataframe must contain variable daily_rain of class numeric with observations greater than or equal to 0.")
+
+  if (count(filter(data, daily_rain < 0)) > 0) return("Dataframe must contain variable daily_rain of class numeric with observations greater than or equal to 0.")
 
   precip_df <- data %>%
     dplyr::filter(year %in% years) %>%
