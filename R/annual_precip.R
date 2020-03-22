@@ -24,7 +24,7 @@ annual_precip = function(data = "",  years = 1952:2019){
     dplyr::filter(year %in% years) %>%
     dplyr::select(year, month, day, daily_rain)
 
-  precip_sum <- aggregate(precip_df$daily_rain, by=list(precip_df$year), FUN = sum)
+  precip_sum <- aggregate(precip_df$daily_rain, by = list(precip_df$year), FUN = sum)
   names(precip_sum) = c("Year", "Rainfall.inches")
   years = as.numeric(as.character(precip_sum$Year))
 
