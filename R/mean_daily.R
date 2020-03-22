@@ -22,7 +22,7 @@ mean_daily = function(data = "", start = "1900-01-01", end = "2000-01-01"){
   sum <- sum(precip_df$daily_rain)
 
   # calculate duration
-  dur <- as.numeric(end_date - start_date)
+  dur <- as.numeric(end_date - start_date) + 1
 
   # calculate mean
   mean <- sum / dur
