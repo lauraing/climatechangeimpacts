@@ -1,10 +1,10 @@
 #' watersupply
 #'
 #' Calculate annual total precipitation each year for UCSB during a specified time period.
-#' @param data data frame with columns year, month, day, daily_rain
+#' @param data data frame with columns year, month, day, daily_rain (rainfaill in inches)
 #' @param years the years in the data frame you want to specify for the time period (default is 1952 to 2018)
-#' @param area the surface area of the reservoir
-#' @param total_depth the total depth of the reservoir
+#' @param area the surface area of the reservoir in square feet
+#' @param total_depth the total depth of the reservoir in feet
 #' @param start_depth the depth at the beginning of the year range in years
 #' @author Laura Ingulsrud & Keene Morrow
 #' @example watersupply(data = UCSB_rain, years = 2010:2015, area = 1000, total_depth = 2000, start_depth = 10)
@@ -22,7 +22,7 @@ watersupply = function(data = "",  years = 1952:2018, area = 100, total_depth = 
 
   total_depth = ifelse((total_depth <= 0), return("total_depth must be greater than zero"), total_depth)
 
-  start_depth = ifelse((start_depth <= 0), return("start_depth must be greater than zero"), start_depth)
+  start_depth = ifelse((start_depth < 0), return("start_depth must be greater than or equal to zero"), start_depth)
 
   if (start_depth > total_depth) return("start_depth must not be greater than total_depth")
 
