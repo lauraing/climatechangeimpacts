@@ -10,18 +10,13 @@ test_data <- as.data.frame(cbind(year = c(2018, 2018, 2019, 2019, 2020, 2020),
                                  day = rep(1),
                                  daily_rain = rep(1)))
 
-annual_precip(data = test_data, years = 2018:2020)
-
 test_that("annual_precip_returns_dataframe",{
   expect_equal(class(annual_precip(data = test_data, years = 2018:2020)), "data.frame")
 })
 
-<<<<<<< HEAD
 test_that("annual_precip returns expected values",{
   expect_equal(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches[1], 2)
   expect_equal(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches[2], 2)
   expect_equal(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches[3], 2)
   expect_equal(sum(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches), 6)
 })
-=======
->>>>>>> caea2d6d38ba0097a493e1724aecb41269a0fbab
