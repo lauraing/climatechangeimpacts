@@ -2,7 +2,8 @@
 
 context("Annual Precipitation")
 
-library(tidyverse)
+library(testthat)
+library(climatechangeimpacts)
 
 test_data <- as.data.frame(cbind(year = c(2018, 2018, 2019, 2019, 2020, 2020),
                                  month = c(1:6),

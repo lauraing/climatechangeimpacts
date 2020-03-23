@@ -2,9 +2,8 @@
 
 context("Mean Daily")
 
-library(tidyverse)
-
-
+library(testthat)
+library(climatechangeimpacts)
 
 
 test_data <- as.data.frame(cbind(year = c(2018, 2018, 2019, 2019, 2020, 2020),
