@@ -20,8 +20,8 @@ test_that("mean daily returns expected value",{
 })
 
 test_that("returns error if date range extends beyond data",{
-  expect_match(mean_daily(data = test_data_md, start = "2000-06-01", end = "2000-06-30"), "Input start of date range exceeds date range of data")
-  expect_match(mean_daily(data = test_data_md, start = "2030-06-01", end = "2030-06-30"), "Input end of date range exceeds date range of data")
+  expect_match(mean_daily(data = test_data_md, start = "2000-06-01", end = "2019-06-30"), "Input start of date range exceeds date range of data")
+  expect_match(mean_daily(data = test_data_md, start = "2019-06-01", end = "2030-06-30"), "Input end of date range exceeds date range of data")
 })
 
 test_that("returns error if date range contains no observations",{
