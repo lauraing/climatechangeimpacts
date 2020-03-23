@@ -2,6 +2,7 @@
 
 context("Mean Daily")
 
+library(tidyverse)
 library(testthat)
 library(climatechangeimpacts)
 

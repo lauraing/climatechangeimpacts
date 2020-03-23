@@ -2,6 +2,7 @@
 
 context("Water Supply")
 
+library(tidyverse)
 library(testthat)
 library(climatechangeimpacts)
 

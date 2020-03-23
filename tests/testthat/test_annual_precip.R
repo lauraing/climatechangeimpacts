@@ -2,6 +2,7 @@
 
 context("Annual Precipitation")
 
+library(tidyverse)
 library(testthat)
 library(climatechangeimpacts)
 
