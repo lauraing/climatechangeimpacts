@@ -21,8 +21,8 @@ mean_daily = function(data = "", start = "1900-01-01", end = "2000-01-01"){
     mutate(date = as.Date(date)) %>%
     dplyr::filter(date >= start_date & date <= end_date)
 
-  # return NA if no observations in date range
-  if(length(precip_df) <= 0) return("No observations in date range")
+  # return error if no observations in date range
+  if(nrow(precip_df) <= 0) return(NA)
 
   # calculate sum of daily rain
   sum <- sum(precip_df$daily_rain)
