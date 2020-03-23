@@ -13,10 +13,16 @@ mean_daily = function(data = "", start = "1900-01-01", end = "2000-01-01"){
   start_date <- as.Date(start)
   end_date <- as.Date(end)
 
+  if (min(data$date) > start_date) return("Input start of date range exceeds date range of data")
+  if (max(data$date) < end_date) return("Input end of date range exceeds date range of data")
+
   # filter input data to include only dates between start and end dates
   precip_df <- data %>%
     mutate(date = as.Date(date)) %>%
     dplyr::filter(date >= start_date & date <= end_date)
+
+  # return NA if no observations in date range
+  if(length(precip_df) <= 0) return("No observations in date range")
 
   # calculate sum of daily rain
   sum <- sum(precip_df$daily_rain)
