@@ -16,4 +16,9 @@ test_that("annual_precip returns a data frame",{
   expect_equal(class(annual_precip(data = test_data, years = 2018:2020)), "data.frame")
 })
 
-
+test_that("annual_precip returns expected values",{
+  expect_equal(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches[1], 2)
+  expect_equal(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches[2], 2)
+  expect_equal(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches[3], 2)
+  expect_equal(sum(annual_precip(data = test_data, years = 2018:2020)$Rainfall.inches), 6)
+})
