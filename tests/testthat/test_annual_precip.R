@@ -11,7 +11,7 @@ test_data <- as.data.frame(cbind(year = c(2018, 2018, 2019, 2019, 2020, 2020),
                                  day = rep(1),
                                  daily_rain = rep(1)))
 
-test_that("annual_precip_returns_dataframe",{
+test_that("annual_precip returns data frame",{
   expect_equal(class(annual_precip(data = test_data, years = 2018:2020)), "data.frame")
 })
 

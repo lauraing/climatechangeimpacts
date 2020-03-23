@@ -11,7 +11,7 @@ test_data <- as.data.frame(cbind(year = c(2018, 2018, 2019, 2019, 2020, 2020),
                                  day = rep(1),
                                  daily_rain = rep(1)))
 
-test_that("watersupply()_returns_list",{
+test_that("watersupply() returns list",{
   expect_equal(class(watersupply(data = test_data,
                                  years = 2018:2020,
                                  area = 1,
@@ -20,7 +20,7 @@ test_that("watersupply()_returns_list",{
 })
 
 
-test_that("end_volume_(end_vol)_returns_expected_value",{
+test_that("end volume (end_vol) returns expected value",{
   expect_equal(as.numeric(watersupply(data = test_data,
                                       years = 2018:2020,
                                       area = 1,
@@ -29,7 +29,7 @@ test_that("end_volume_(end_vol)_returns_expected_value",{
                0.5)
 })
 
-test_that("percent_full_(pct_full)_returns_expected_value",{
+test_that("percent full (pct_full) returns expected value",{
   expect_equal(as.numeric(watersupply(data = test_data,
                                       years = 2018:2020,
                                       area = 1,
@@ -38,7 +38,7 @@ test_that("percent_full_(pct_full)_returns_expected_value",{
                0.5)
 })
 
-test_that("percent_change_(pct_change)_returns_expected_value",{
+test_that("percent change (pct_change) returns expected value",{
   expect_equal(as.numeric(watersupply(data = test_data,
                                       years = 2018:2020,
                                       area = 1,

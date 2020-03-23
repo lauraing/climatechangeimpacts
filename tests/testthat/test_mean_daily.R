@@ -15,6 +15,6 @@ test_data <- as.data.frame(cbind(year = c(2018, 2018, 2019, 2019, 2020, 2020),
 test_data <- test_data %>%
   mutate(date = as.Date(paste(year, month, day, sep = "-")))
 
-test_that("mean_daily_returns_expected_value",{
+test_that("mean_daily returns expected value",{
   expect_equal(mean_daily(data = test_data, start = "2020-06-01", end = "2020-06-30"), 1/30)
 })
