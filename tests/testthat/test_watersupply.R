@@ -34,7 +34,7 @@ test_that("percent full (pct_full) returns expected value",{
                                       years = 2018:2020,
                                       area = 1,
                                       total_depth = 1,
-                                      start_depth = 0)[1]),
+                                      start_depth = 0)[2]),
                0.5)
 })
 
@@ -43,6 +43,6 @@ test_that("percent change (pct_change) returns expected value",{
                                       years = 2018:2020,
                                       area = 1,
                                       total_depth = 1,
-                                      start_depth = 0)[1]),
+                                      start_depth = 0)[3]),
                0.5)
 })
